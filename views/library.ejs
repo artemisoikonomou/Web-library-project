@@ -1,0 +1,55 @@
+<%- include ("header.ejs") %>
+
+
+<section class="includes-all">
+  <div class="welcome_message-dropdown">
+    <!-- THIS IS THE WELCOME PAGE IN THE HOMEPAGE -->
+    <p class="welcome_message">Welcome to My Personal Library! 📚 <br> <br>
+
+      Step inside and explore the worlds within the pages of the books I’ve read and cherished. <br> <br>
+      Every story is a journey, and here, I share my reflections, thoughts, and reviews to inspire fellow book lovers. <br> <br>
+       Whether you’re searching for your next great read or simply looking to indulge in literary adventures, this is a place to celebrate the magic of books. <br> <br>
+      
+      Happy reading!
+    </p>
+
+  </div>
+
+  <!-- IN THIS SECTION  ALL THE BOOKS THAT EXIST IN DATABASE ARE SHOWN WITH THERE PERSONAL INFORMATION -->
+    <section class="books">
+<!-- GET BACK FROM GET REQUEST THE books ARRAY THAT INCLUDES EVERYTHING -->
+      <% for(let book of books) { %>
+
+        <div class="book-cover_title-recomendation-summary_book-opinion">
+
+          <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/<%= book.isbn %>-L.jpg" alt="<%= book.title %> Book Cover">
+         
+  
+          <div class="title-recomendation-summary">
+
+            <p class="title"><%= book.title %></p>
+  
+            <p class="recomandation">
+              <% for (let i = 0; i < book.recomandation; i++) { %>
+                <span class="fa fa-star checked"></span>
+              <% } %>
+            </p>
+
+            
+          <p class="summary"><%= book.summary %></p>
+
+          <!-- THIS IS THE LINK THAT GETS THE ID OF THE BOOK THAT WAS CLICKED TO BE USED TO OPEN THE NEXT PAGE ΔΕΤΑΙΛΣ.ΕΞΣ -->
+          <a href="/book-opinion?id=<%= book.id %>" class="link">Click to see my personal opinion on the book and more</a>
+
+          </div>
+
+        </div>
+      <% } %>
+
+    </section>
+</section>
+
+
+
+
+<%- include ("footer.ejs") %>

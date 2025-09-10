@@ -1,0 +1,40 @@
+<%- include ("header.ejs") %>
+
+<section class="includes-all">
+   
+  <!-- THIS IS THE PAGE WITH MY OPINION AND FAVORITE QUOTES FROM THE BOOK THAT WAS CHOOSEN ,RETURN BACK AN ARRAY WITH EVERYTHING THAT HAS TO DO WITH THAT SPECIFIC BOOK -->
+    
+  <!-- THIS THE ARRAY WITH EVERY INFORMATION ABOUT MY OPINION ABOUT THE BOOK -->
+      <% for(let my_opinion of my_opinions) { %>
+        
+        <div class="title-recomandation-image-opinion-quotes">
+
+            <p class="title"><%= my_opinion.title %></p>
+      
+            <p class="recomandation">
+              <% for (let i = 0; i < my_opinion.recomandation; i++) { %>
+                <span class="fa fa-star checked"></span>
+              <% } %>
+            </p>
+               
+                  <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/<%= my_opinion.isbn %>-L.jpg" alt="<%= my_opinion.title %> Book Cover">
+               
+                  <h2>My opinion about the book</h2>
+                  <p class="my_opinion"><%= my_opinion.personal_opinion %></p>
+      
+                  <h2>My favorite quotes from the book</h2>
+                  <div class="quotes">
+                    <!-- THIS THE ARRAY WITH ALL THE QUOTES -->
+                    <% for(let quote of quotes) { %>
+                        <p><%= quote.quotes %></p>
+                      <% } %>
+                     
+                  </div>
+
+        </div>
+      
+        <% } %>
+ 
+</section>
+
+<%- include ("footer.ejs") %>

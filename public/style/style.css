@@ -1,0 +1,213 @@
+
+body{
+    background-color: #EDE0D4;
+    margin: 0px;
+}
+/* THIS IS THE PICTURE OF BOOKS IN NAVBAR */
+.books-navabar-image{
+    width: 50px;
+    height: 50px;
+    
+}
+
+/* THIS IS ABOUT EVERYTHING THAT IS INCLUDED IN THE HOMEPAGE BESIDES THE NAVBAR AND THE FOOTER */
+.includes-all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+/* THIS IS THE BOX THAT INCLUDES THE WELCOME MESSAGE */
+.welcome_message {
+    font-size: 20px;
+    color: #4A4A4A;
+    padding: 50px;
+    background-color: #F9F9F9;
+    border-radius: 10px;
+    text-align: left;
+    margin: 150px;
+    height: 450px;
+    max-width: 900px;
+}
+
+  /* THIS IS USED FOR WHEN I GO OVER THE CATEGORIES ON THE DROPDOWN  */
+.dropdown-item:hover{
+color: #DDB892 !important;
+}
+
+/* THIS INCLUDES EVERYTHING ABOUT THE BOOKS */
+.book-cover_title-recomendation-summary_book-opinion{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-bottom: 200px;
+}
+
+/* THIS IS THE IMAGE OF THE COVER OF THE BOOK */
+.book-cover{
+    width: 300px;
+    height: 400px;
+   
+}
+
+/* THIS CREATES THE REALITIONSHIP BETWEEN THE TITLE OF THE BOOK WITH THE 5 STARS OF IT */
+.title-recomendation{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    font-size: 30px;
+    font-weight: 400;
+    text-shadow: 1px 1px 3px #000000;
+}
+
+.checked {
+    color: orange;
+}
+
+.summary{
+    width: 600px;
+    line-height: 2.4; 
+}
+.link{
+    margin-bottom: 70px;
+    color: #000000;
+}
+
+.link:hover{
+    color: #333333;
+}
+
+footer{
+    background-color: #DDB892; 
+    color: #4A4A4A;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 15px;
+    height: 80px;
+    text-align: center;
+    padding: 35px;
+    margin: 111px 0px 0px 0px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* THIS IS USED IN THE WHOLE PAGE THAT WHEN IT IS LOADED IT APPEARS SLOWLY EVERYTHING THAT EXISTS IN THE PAGE */
+.includes-all {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards; /* Apply fadeIn animation */
+}
+
+  /* Define keyframes for the fade-in animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* THIS IS USED FOR WHEN THE SIZE OF THE SCREEN GETS SMALLER */
+@media (max-width:987px){
+
+    .welcome_message {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 50px;
+        width: 300px;
+        height: 600px;
+        font-size: 15px;
+        margin: 170px;
+    }
+
+    .book-cover{
+        width: 100px;
+        height: 150px;
+        margin-left: 50px;
+    }
+
+
+    .summary{
+        width: 200px;
+        font-size: 12px;
+    }
+
+    .link{
+        font-size: 12px;
+    }
+}
+
+  /* ****************************************DETAILS PAGE********************************************************** */
+
+ /*THIS INCLUDES EVRYTHING THAT IS SAID IN THE TITLE  */
+.title-recomandation-image-opinion-quotes{
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+/* THIS IS ABOUT THE My opinion about the book AND My favorite quotes from the book  */
+ h2{
+    font-size: xx-large;
+    padding-top: 100px;
+}
+
+/* THIS IS THE <p> THAT INCLUDES MY OPINION */
+.my_opinion{
+    max-width: 800px;
+    padding: 40px;
+    line-height: 2;
+}
+
+/* THIS IS THE DIV CLASS THAT INCLUDES  ALL MY FAVORITE QUOTES */
+.quotes{
+    max-width: 600px;
+    padding: 70px;
+    line-height: 2;
+}
+
+/* THIS IS USED FOR WHEN THE SCREEN GETS SMALLER */
+@media (max-width:987px){
+
+    .navbar{
+        height: 150px !important;
+    }
+
+    .navbar .navbar-brand {
+        font-size: 20px !important; 
+    }
+    
+    .navbar .nav-link {
+        font-size: 15px !important;
+    }
+
+    h2{
+        padding: 50px;
+       
+    }
+
+    .my_opinion{
+        width: 400px;
+        font-size: 12px;
+    }
+
+    .quotes{
+        width: 400px;
+        font-size: 12px;
+        
+    }
+
+}
+
+
+
